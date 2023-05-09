@@ -6,6 +6,8 @@ import './App.css';
 function App() {
    const [name, setName] = useState("")
 
+   const [college, setCollege] = useState("")
+
   return (
     <div>
        <h1>Form Handling in React</h1>
@@ -16,13 +18,23 @@ function App() {
     
     <br/>
     <br/>
-    <h3>{name}</h3>
-    <button type="button">submit</button> 
+    
+    <input type='text' value={college} onChange={(e)=>{
+      setCollege(e.target.value);
+
+    }} />
+    
+
+    <h3>{name}Studying in {college}</h3>
+
+     <button type="button">submit</button> 
     <button type="button" onClick={()=>
     setName('')
     }>
       clear</button>
-    </div>
+  </div> 
+
+
   );
 }
 
