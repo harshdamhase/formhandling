@@ -9,7 +9,7 @@ function App() {
    const [college, setCollege] = useState("")
 
   return (
-    <div>
+    <div className='card'>
        <h1>Form Handling in React</h1>
 
     <input type="text" value={name} onChange={(e)=>{
@@ -19,7 +19,8 @@ function App() {
     <br/>
     <br/>
     
-    <input type='text' value={college} onChange={(e)=>{
+    <input type='text' 
+    value={college} onChange={(e)=>{
       setCollege(e.target.value);
 
     }} />
@@ -27,11 +28,11 @@ function App() {
 
     <h3>{name}Studying in {college}</h3>
 
-     <button type="button">submit</button> 
+    {/* /* <button type="button">submit</button> 
     <button type="button" onClick={()=>
     setName('')
     }>
-      clear</button>
+      clear</button> */ }
   </div> 
 
 
